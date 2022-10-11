@@ -1,3 +1,7 @@
+IN PROGRESS
+Faltam preencher as informações na tela de visualização das informações dos cards.
+E finalizar os testes.
+
 # Cards
 
 ## Sobre o projeto
