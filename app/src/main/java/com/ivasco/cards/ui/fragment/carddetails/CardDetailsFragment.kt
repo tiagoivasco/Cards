@@ -11,11 +11,9 @@ import com.ivasco.cards.data.model.Card
 import com.ivasco.cards.databinding.FragmentCardDetailsBinding
 import com.ivasco.cards.ui.fragment.base.BaseFragment
 import com.ivasco.cards.ui.glide.ImgLoader
-import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class CardDetailsFragment :
     BaseFragment<FragmentCardDetailsBinding>(R.layout.fragment_card_details) {
-    private val viewModel: CardDetailsViewModel by viewModel()
     private lateinit var card: Card
 
     companion object {
@@ -52,7 +50,18 @@ class CardDetailsFragment :
             )
 
             with(binding) {
+                //REALIZAR UMA FORMATAÇÃO AO INVÉS DE UTILIZAR VÁRIOS TXTVIEW
+                //USAR STRINGS AO INVES DE CONCATENAR
                 cardName.text = card.name
+                cardFlavor.text = "Flavor: " + card.flavor
+                cardShortInfo.text = "Short Info: " + card.text
+                cardSet.text = "Set: " + card.cardSet
+                cardType.text = "Type: " + card.type
+                cardFaction.text = "Faction: " + card.faction
+                cardRarity.text = "Rarity: " + card.rarity
+                cardAttack.text = "Attack: " + card.attack.toString()
+                cardCost.text = "Cost: " + card.cost.toString()
+                cardHealth.text = "Health: " + card.health.toString()
             }
         }
     }

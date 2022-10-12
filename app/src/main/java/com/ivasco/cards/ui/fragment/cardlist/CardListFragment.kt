@@ -1,8 +1,6 @@
 package com.ivasco.cards.ui.fragment.cardlist
 
 import android.os.Bundle
-import android.util.Log
-import android.util.Log.INFO
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -45,7 +43,6 @@ class CardListFragment : BaseFragment<FragmentCardsListBinding>(R.layout.fragmen
     private fun initAdapter(view: View) {
         cardsAdapter = CardsAdapter { card ->
             val bundle = bundleOf(Pair(CardDetailsFragment.CARD_BUNDLE, card))
-//            Log.i("testeeee", card.)
             Navigation.findNavController(view)
                 .navigate(R.id.action_cardsListFragment_to_cardDetailsFragment, bundle)
         }
